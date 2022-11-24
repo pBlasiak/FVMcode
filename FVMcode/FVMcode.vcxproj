@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Face.cpp" />
     <ClCompile Include="FVMcode.cpp" />
+    <ClCompile Include="SquareFace.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cell.h" />
