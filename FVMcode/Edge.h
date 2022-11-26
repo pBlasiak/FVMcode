@@ -1,20 +1,20 @@
 #pragma once
-#include "Node.h"
+#include "Vertex.h"
 
 class Edge
 {
 private:
-	Node p_;
-	Node k_;
+	Vertex p_;
+	Vertex k_;
 	double length_;
 
 public: 
-	Node p() const
+	Vertex p() const
 	{
 		return p_;
 	}
 
-	Node k() const
+	Vertex k() const
 	{
 		return k_;
 	}
@@ -34,6 +34,6 @@ public:
 		);
 	}
 
-	Edge(Node p, Node k) : p_{ p }, k_{ k }, length_(calcLength()) {}
+	Edge(Vertex p, Vertex k) : p_{ p }, k_{ k }, length_(calcLength()) {}
 
 };

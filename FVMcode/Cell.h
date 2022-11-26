@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "Node.h"
+#include "Vertex.h"
 #include "Edge.h"
 #include "Face.h"
 
@@ -10,7 +10,7 @@ protected:
 	std::vector<Face> faces_;
 
 public:
-	//virtual std::vector<Node> nodes() const = 0;
+	//virtual std::vector<Vertex> nodes() const = 0;
 	//virtual std::vector<Face> faces() const = 0;
-	virtual Node cellCenter() const = 0;
+	virtual Vertex cellCenter() const = 0;
 };

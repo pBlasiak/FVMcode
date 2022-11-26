@@ -1,19 +1,24 @@
 #pragma once
 #include "Face.h"
 #include "Edge.h"
-#include "Node.h"
+#include "Vertex.h"
 
 class SquareFace : public Face
 {
 private:
+	Vertex basePoint_;
 	double length_;
-	Node basePoint_;
 
 public:
 
 	//- Assumed that square is parallel to z axis
-	//  the two edges are parallel to x and y axes respectively
-	SquareFace() : length_{ 1 }, basePoint_{ Node() };
-	SquareFace(double l, Node n) : length_{ l }, basePoint_{ n };
+	//  the two edges are parallel to x and y axes respectively.
+	//  Default square is of length 1 at (0,0,0)
+	SquareFace();
+	SquareFace(const Vertex& n, double l);
+
+	void calcArea() override;
+	void calcCenter() override;
+
 };
 
