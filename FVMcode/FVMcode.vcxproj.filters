@@ -18,14 +18,14 @@
     <ClCompile Include="FVMcode.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="Face.cpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClCompile>
     <ClCompile Include="SquareFace.cpp">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Face.cpp">
+      <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Vertex.cpp">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -141,7 +141,9 @@
   <ItemGroup>
     <ClCompile Include="Face.cpp" />
     <ClCompile Include="FVMcode.cpp" />
-    <ClCompile Include="Vertex.cpp" />
+    <ClCompile Include="Vertex.cpp">
+      <DeploymentContent>false</DeploymentContent>
+    </ClCompile>
     <ClCompile Include="SquareFace.cpp" />
   </ItemGroup>
   <ItemGroup>

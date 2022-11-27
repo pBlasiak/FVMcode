@@ -17,6 +17,17 @@ public:
 	SquareFace();
 	SquareFace(const Vertex& n, double l);
 
+	// Methods
+	Vertex bp()
+	{
+		return basePoint_;
+	}
+
+	double side()
+	{
+		return length_;
+	}
+
 	void calcArea() override;
 	void calcCenter() override;
 

@@ -2,10 +2,18 @@
 //
 
 #include <iostream>
+#include "SquareFace.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Vertex aa(23.43, 4354.09, -9394.3);
+	SquareFace a(aa, 342.567);
+	cout << "Center: " << a.center() << endl;
+	cout << a.bp() << endl;
+	cout << a.side() << endl;
+
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

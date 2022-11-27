@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+
 class Vertex
 {
 private:
@@ -7,6 +9,42 @@ private:
 	double z_;
 
 public:
+	// Konstruktory
+
+	Vertex() : x_(0), y_(0), z_(0) {}
+	Vertex(double x, double y, double z) : x_(x), y_(y), z_(z) {}
+	Vertex(const Vertex& n, double dx = 0, double dy = 0, double dz = 0)
+		: x_(n.x() + dx), y_(n.y() + dy), z_(n.z() + dz) {}
+
+	// Operatory
+	Vertex operator+(const Vertex& r)
+	{
+		return Vertex
+		(
+			x_ + r.x(),
+			y_ + r.y(),
+			z_ + r.z()
+		);
+	}
+
+	Vertex operator/(const double d)
+	{
+		if (d == 0)
+		{
+			std::cout << "Division by zero in operator/ of Vertex." << std::endl;
+			exit(-1);
+		}
+		return Vertex(x_ / d, y_ / d, z_ / d);
+	}
+
+	friend std::ostream& operator<<(std::ostream& os, const Vertex n)
+	{
+		os << "(" << n.x_ << ", " << n.y_ << ", " << n.z_ << ")" << std::endl;
+		return os;
+	}
+
+	// Metody
+
 	double x() const
 	{
 		return x_;
@@ -37,8 +75,5 @@ public:
 		z_ += dz;
 	}
 
-	Vertex() : x_(0), y_(0), z_(0) {}
-	Vertex(double x, double y, double z) : x_(x), y_(y), z_(z) {}
-	Vertex(const Vertex& n, double dx = 0, double dy = 0, double dz = 0)
-		: x_(n.x() + dx), y_(n.y() + dy), z_(n.z() + dz) {}
 };
+
