@@ -22,9 +22,9 @@ public:
 		}
 		return Vertex
 		(
-			(k_.x() - p_.x()) / d,
-			(k_.y() - p_.y()) / d,
-			(k_.z() - p_.z()) / d
+			p_.x() + (k_.x() - p_.x()) / d,
+			p_.y() + (k_.y() - p_.y()) / d,
+			p_.z() + (k_.z() - p_.z()) / d
 		);
 	}
 

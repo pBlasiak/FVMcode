@@ -8,12 +8,19 @@ using namespace std;
 
 int main()
 {
-	Vertex aa(23.43, 4354.09, -9394.3);
-	SquareFace a(aa, 342.567);
-	cout << "Center: " << a.center() << endl;
-	cout << a.bp() << endl;
-	cout << a.side() << endl;
-
+	Vertex aa(100, 100, 100);
+	SquareFace a(aa, 100);
+	cout << a.label() << endl;
+	cout << a.faceNum() << endl;
+	SquareFace b(a);
+	cout << b.label() << endl;
+	cout << a.faceNum() << endl;
+	SquareFace c(aa, 111);
+	cout << c.label() << endl;
+	cout << a.label() << endl;
+	cout << a.faceNum() << endl;
+	cout << b.faceNum() << endl;
+	cout << c.faceNum() << endl;
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

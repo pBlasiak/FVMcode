@@ -1,7 +1,7 @@
 #include "SquareFace.h"
 #include <iostream>
 
-SquareFace::SquareFace() : basePoint_{ Vertex() }, length_{ 1 }
+SquareFace::SquareFace() : Face(), basePoint_{ Vertex() }, length_{ 1 }
 {
 	edges_.push_back(Edge(basePoint_, basePoint_ + Vertex(1,0,0)));
 	edges_.push_back(Edge(basePoint_ + Vertex(1,0,0), basePoint_ + Vertex(1,1,0)));
@@ -12,7 +12,7 @@ SquareFace::SquareFace() : basePoint_{ Vertex() }, length_{ 1 }
 	calcCenter();
 }
 
-SquareFace::SquareFace(const Vertex& n, double l) : basePoint_{n}, length_{l}
+SquareFace::SquareFace(const Vertex& n, double l) : Face(), basePoint_{n}, length_{l}
 {
 	edges_.push_back(Edge(basePoint_, basePoint_ + Vertex(l,0,0)));
 	edges_.push_back(Edge(basePoint_ + Vertex(l,0,0), basePoint_ + Vertex(l,l,0)));
