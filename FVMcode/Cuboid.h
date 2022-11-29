@@ -19,6 +19,6 @@ public:
     Cuboid(Face& f, double dx);
 
     //- Destructor
-    virtual ~Cuboid() {}
+    virtual ~Cuboid();
 };
 

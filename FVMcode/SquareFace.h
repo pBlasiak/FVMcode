@@ -16,7 +16,10 @@ public:
 	//  the two edges are parallel to x and y axes respectively.
 	//  Default square is of length 1 at (0,0,0)
 	SquareFace();
-	SquareFace(const Vertex& n, double l);
+	SquareFace(const Vertex n, double l);
+
+	//- Two edges define plane of a face
+	SquareFace(const Edge ep, const Edge ek);
 
 	// Methods
 	Vertex bp() const

@@ -3,24 +3,18 @@
 
 #include <iostream>
 #include "SquareFace.h"
+#include "Vertex.h"
 
 using namespace std;
 
 int main()
 {
-	Vertex aa(100, 100, 100);
-	SquareFace a(aa, 100);
-	cout << a.label() << endl;
-	cout << a.faceNum() << endl;
-	SquareFace b(a);
-	cout << b.label() << endl;
-	cout << a.faceNum() << endl;
-	SquareFace c(aa, 111);
-	cout << c.label() << endl;
-	cout << a.label() << endl;
-	cout << a.faceNum() << endl;
-	cout << b.faceNum() << endl;
-	cout << c.faceNum() << endl;
+	Vertex a(100, 100, 100);
+	Vertex b(190, 12, 23);
+	Vertex c(190, 12, 23);
+	Edge A(a, b);
+	Edge B(c, a);
+	cout << (b == b) << "" << endl;
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

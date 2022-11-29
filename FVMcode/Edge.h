@@ -28,12 +28,24 @@ public:
 		);
 	}
 
-	// Methods
+	//- Dot product
+	double operator*(Edge p)
+	{
+		return
+			(
+				(k_ - p_) 
+
+				);
+	}
+
+	//- Methods
+	//- Begining of an edge
 	Vertex p() const
 	{
 		return p_;
 	}
 
+	//- End of an edge
 	Vertex k() const
 	{
 		return k_;

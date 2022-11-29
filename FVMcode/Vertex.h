@@ -37,6 +37,23 @@ public:
 		return Vertex(x_ / d, y_ / d, z_ / d);
 	}
 
+	bool operator==(Vertex p)
+	{
+		if (x_ == p.x() && y_ == p.y() && z_ == p.z())
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	bool operator!=(Vertex p)
+	{
+		return !(operator==(p));
+	}
+
 	friend std::ostream& operator<<(std::ostream& os, const Vertex n)
 	{
 		os << "(" << n.x_ << ", " << n.y_ << ", " << n.z_ << ")" << std::endl;
