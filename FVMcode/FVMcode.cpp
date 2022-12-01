@@ -12,9 +12,13 @@ int main()
 	Vertex a(100, 100, 100);
 	Vertex b(190, 12, 23);
 	Vertex c(190, 12, 23);
+	Vertex i(1, 0, 0);
+	Vertex j(1, 0, 0);
 	Edge A(a, b);
 	Edge B(c, a);
 	cout << (b == b) << "" << endl;
+	SquareFace(A, B);
+	cout << A * B << endl;
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

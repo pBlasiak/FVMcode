@@ -31,11 +31,7 @@ public:
 	//- Dot product
 	double operator*(Edge p)
 	{
-		return
-			(
-				(k_ - p_) 
-
-				);
+		return (k_ - p_)*(p.k_ - p.p_);
 	}
 
 	//- Methods

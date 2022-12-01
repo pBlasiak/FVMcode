@@ -21,10 +21,26 @@ public:
 	{
 		return Vertex
 		(
-			x_ + r.x(),
-			y_ + r.y(),
-			z_ + r.z()
+			x_ + r.x_,
+			y_ + r.y_,
+			z_ + r.z_
 		);
+	}
+
+	Vertex operator-(const Vertex& r)
+	{
+		return Vertex
+		(
+			x_ - r.x_,
+			y_ - r.y_,
+			z_ - r.z_
+		);
+	}
+
+	//- Dot product
+	double operator*(const Vertex& r)
+	{
+		return (x_ * r.x_ + y_ * r.y_ + z_ * r.z_);
 	}
 
 	Vertex operator/(const double d)

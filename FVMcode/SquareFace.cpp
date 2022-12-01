@@ -23,7 +23,7 @@ SquareFace::SquareFace(const Vertex n, double l) : Face(), basePoint_{n}, length
 	calcCenter();
 }
 
-SquareFace::SquareFace(const Edge ep, const Edge ek) : Face(), basePoint_{ ep.p() }, length_{ep.length()}
+SquareFace::SquareFace(Edge ep, Edge ek) : Face(), basePoint_{ ep.p() }, length_{ep.length()}
 {
 	// Two edges should be of equal length
 	if (length_ != ek.length())
@@ -40,7 +40,7 @@ SquareFace::SquareFace(const Edge ep, const Edge ek) : Face(), basePoint_{ ep.p(
 	}
 
 	// Two edges should be perpendicular
-	if (!(ep * ek))
+	if ((ep * ek) != 0)
 	{
 		std::cout << "The edges are not perpendicular." << std::endl;
 		exit(-1); 
