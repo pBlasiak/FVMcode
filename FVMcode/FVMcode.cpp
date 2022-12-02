@@ -9,16 +9,19 @@ using namespace std;
 
 int main()
 {
-	Vertex a(100, 100, 100);
-	Vertex b(190, 12, 23);
-	Vertex c(190, 12, 23);
+	Vertex r(2, -3, 5);
+	Vertex o;
+	Vertex A(10,10,2);
+	Vertex B(-10,-5,1);
+	Vertex C(2,-2,-2);
+	Vertex D(1,-2,3);
+	Vertex E(2,3,1);
 	Vertex i(1, 0, 0);
 	Vertex j(1, 0, 0);
-	Edge A(a, b);
-	Edge B(c, a);
-	cout << (b == b) << "" << endl;
-	SquareFace(A, B);
-	cout << A * B << endl;
+	Edge AA(o, D);
+	Edge BB(o, r);
+	cout << AA * BB << endl;
+	SquareFace f(AA, BB);
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

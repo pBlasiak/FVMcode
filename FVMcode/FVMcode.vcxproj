@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="Cuboid.cpp" />
+    <ClCompile Include="Edge.cpp" />
     <ClCompile Include="Face.cpp" />
     <ClCompile Include="FVMcode.cpp" />
     <ClCompile Include="Vertex.cpp">

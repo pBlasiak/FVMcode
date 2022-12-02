@@ -7,6 +7,8 @@ private:
 	Vertex p_;
 	Vertex k_;
 	double length_;
+	static long numEdges_; // trzeba dodac copy constructor i assignment
+	long label_;
 
 public: 
 	// Constructors

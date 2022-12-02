@@ -32,8 +32,14 @@ SquareFace::SquareFace(Edge ep, Edge ek) : Face(), basePoint_{ ep.p() }, length_
 		exit(-1);
 	}
 
-	// The end of first edge should be the begining of the second one
-	if (ep.k() != ek.p())
+	// The edges should be connected
+	if 
+	(
+		ep.p() != ek.p() 
+	 &&	ep.k() != ek.p() 
+	 &&	ep.p() != ek.k() 
+	 &&	ep.k() != ek.k() 
+	)
 	{
 		std::cout << "The edges are not connected." << std::endl;
 		exit(-1);
@@ -42,10 +48,12 @@ SquareFace::SquareFace(Edge ep, Edge ek) : Face(), basePoint_{ ep.p() }, length_
 	// Two edges should be perpendicular
 	if ((ep * ek) != 0)
 	{
-		std::cout << "The edges are not perpendicular." << std::endl;
+		std::cout << "The edges " << ep.are not perpendicular." << std::endl;
 		exit(-1); 
 	}
 
+	//w zaleznosci jak sa poloczne krawedzie trzeba napisac odpowiedni warunek
+	// ktora  jest pierwsza zeby bylo right hand rule spelnione
 	edges_.push_back(ep);
 	edges_.push_back(ek);
 	//edges_.push_back(e.k(), basePoint_ + Vertex(l, l, 0)));
