@@ -1,3 +1,3 @@
 #include "Cell.h"
 
-long Cell::cellNum_ = 0;
+//long Cell::cellNum_ = 0;

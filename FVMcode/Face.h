@@ -6,34 +6,44 @@
 class Face
 {
 protected:
-	static long faceNum_;
-	const long label_;
+	//static long faceNum_;
+	//const long label_;
 	double area_;
+
+	//- Centroid
 	Vertex center_;
+	
+	//- Normal vector
+	Vertex n_;
+
+	// Order of edges have to follow right hand rule?
 	std::vector<Edge> edges_;
 	std::vector<Face*> neighbours_;
 
 public:
-	//- Constructors
-	Face() : label_{faceNum_++}, area_{ 0 } { }
-	Face(const Face& f);
+//- Constructors
+	Face() : area_{ 0 } { }
+	Face(const Face& f) = delete;
 
-	//- Destructor 
+//- Destructor 
 	virtual ~Face(){}
 
-	//- Methods
+//- Operators
+	Face& operator=(const Face&) = delete;
 
-	//- Returns number of faces
-	double faceNum() const
-	{
-		return faceNum_;
-	}
+//- Methods
 
-	//- Returns face label
-	double label() const
-	{
-		return label_;
-	}
+	////- Returns number of faces
+	//double faceNum() const
+	//{
+	//	return faceNum_;
+	//}
+
+	////- Returns face label
+	//double label() const
+	//{
+	//	return label_;
+	//}
 
 	//- Returns area of a face
 	double area() const
@@ -42,6 +52,12 @@ public:
 	}
 
 	//- Returns centroid of a face
+	Vertex center() const
+	{
+		return center_;
+	}
+
+	//- Returns vector normal to a face
 	Vertex center() const
 	{
 		return center_;

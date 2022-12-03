@@ -11,7 +11,7 @@ private:
 	double length_;
 
 public:
-
+//- Constructors
 	//- Assumed that square is parallel to z plane
 	//  the two edges are parallel to x and y axes respectively.
 	//  Default square is of length 1 at (0,0,0)
@@ -21,7 +21,10 @@ public:
 	//- Two edges define plane of a face
 	SquareFace(const Edge ep, const Edge ek);
 
-	// Methods
+//- Destructor
+	virtual ~SquareFace() {}
+
+// Methods
 	Vertex bp() const
 	{
 		return basePoint_;

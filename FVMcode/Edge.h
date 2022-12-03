@@ -7,14 +7,14 @@ private:
 	Vertex p_;
 	Vertex k_;
 	double length_;
-	static long numEdges_; // trzeba dodac copy constructor i assignment
-	long label_;
+	//static long numEdges_; // trzeba dodac copy constructor i assignment
+	//long label_;
 
 public: 
-	// Constructors
+// Constructors
 	Edge(Vertex p, Vertex k) : p_{ p }, k_{ k }, length_(calcLength()) {}
 
-	// Operators
+// Operators
 	Vertex operator/(const double d)
 	{
 		if (d == 0)
@@ -36,7 +36,7 @@ public:
 		return (k_ - p_)*(p.k_ - p.p_);
 	}
 
-	//- Methods
+//- Methods
 	//- Begining of an edge
 	Vertex p() const
 	{
@@ -63,6 +63,4 @@ public:
 		  +	pow(k_.z() - p_.z(),2) 
 		);
 	}
-
-
 };

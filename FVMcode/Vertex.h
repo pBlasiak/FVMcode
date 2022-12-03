@@ -9,8 +9,8 @@ private:
 	double z_;
 
 public:
-	// Konstruktory
 
+	// Constructors
 	Vertex() : x_(0), y_(0), z_(0) {}
 	Vertex(double x, double y, double z) : x_(x), y_(y), z_(z) {}
 	Vertex(const Vertex& n, double dx = 0, double dy = 0, double dz = 0)
@@ -70,6 +70,7 @@ public:
 		return !(operator==(p));
 	}
 
+	//- Friend
 	friend std::ostream& operator<<(std::ostream& os, const Vertex n)
 	{
 		os << "(" << n.x_ << ", " << n.y_ << ", " << n.z_ << ")" << std::endl;

@@ -48,7 +48,7 @@ SquareFace::SquareFace(Edge ep, Edge ek) : Face(), basePoint_{ ep.p() }, length_
 	// Two edges should be perpendicular
 	if ((ep * ek) != 0)
 	{
-		std::cout << "The edges " << ep.are not perpendicular." << std::endl;
+		std::cout << "The edges are not perpendicular." << std::endl;
 		exit(-1); 
 	}
 

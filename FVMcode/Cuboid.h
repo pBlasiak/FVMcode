@@ -14,11 +14,11 @@ private:
     double h_;
 
 public:
-    //- Constructors
+//- Constructors
     Cuboid();
     Cuboid(Face& f, double dx);
 
-    //- Destructor
+//- Destructor
     virtual ~Cuboid();
 };
 
